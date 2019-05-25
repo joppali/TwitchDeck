@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import TwitchDeck from './TwitchDeck';
+import TwitchDeck from './components/pages/TwitchDeck';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<TwitchDeck />, document.getElementById('root'));
