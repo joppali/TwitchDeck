@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import React, {FC} from 'react';
-import Clip from '../molecules/Clip';
 import {css, jsx} from '@emotion/core';
+
+import Clip from '../molecules/Clip';
 
 const clipBoxCss = css`
   border: 1px solid #d4d4d5;
