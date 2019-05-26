@@ -18,11 +18,9 @@ const clipBoxCss = css`
 const prevClipBoxCss = css`
   border: 1px solid #d4d4d5;
   border-radius: 0.28571429rem;
-  width: 60%;
+  width: 48%;
   height: auto;
-  top: 10%;
   left: 15%;
-  right: 25%;
   position: absolute;
   padding: 27% 0 0;
 `;
@@ -30,10 +28,8 @@ const prevClipBoxCss = css`
 const nextClipBoxCss = css`
   border: 1px solid #d4d4d5;
   border-radius: 0.28571429rem;
-  width: 60%;
+  width: 48%;
   height: auto;
-  top: 10%;
-  left: 25%;
   right: 15%;
   position: absolute;
   padding: 27% 0 0;
