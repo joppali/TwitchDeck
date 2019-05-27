@@ -1,23 +1,24 @@
 /** @jsx jsx */
 import React, {FC} from 'react';
 import {css, jsx} from '@emotion/core';
+import Slider from 'react-slick';
 
 import Clip from '../molecules/Clip';
 
-const clipBoxCss = css`
-  border: 1px solid #d4d4d5;
-  border-radius: 0.28571429rem;
-  width: 100%;
-  height: auto;
-  position: absolute;
-  padding: 56.25% 0 0;
-`;
+const settings = {
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
 
 const ClipStream: FC = () => (
   <div>
-    <div css={clipBoxCss}>
+    <Slider {...settings}>
       <Clip />
-    </div>
+      <Clip />
+      <Clip />
+    </Slider>
   </div>
 );
 

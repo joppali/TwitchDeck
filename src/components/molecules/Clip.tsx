@@ -3,6 +3,15 @@ import React, {FC} from 'react';
 import {Dimmer, Loader} from 'semantic-ui-react';
 import {css, jsx} from '@emotion/core';
 
+const clipBoxCss = css`
+  border: 1px solid #d4d4d5;
+  border-radius: 0.28571429rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 56.25% 0 0;
+`;
+
 const clipCss = css`
   position: absolute;
   top: 0;
@@ -13,7 +22,7 @@ const clipCss = css`
 `;
 
 const Clip: FC = () => (
-  <div>
+  <div css={clipBoxCss}>
     <Dimmer>
       <Loader>Loading</Loader>
     </Dimmer>
