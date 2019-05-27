@@ -21,12 +21,22 @@ const clipCss = css`
   background: #eee;
 `;
 
+const iframeCss = css`
+  width: 100%;
+  height: 100%;
+`;
+
 const Clip: FC = () => (
   <div css={clipBoxCss}>
     <Dimmer>
       <Loader>Loading</Loader>
     </Dimmer>
-    <div css={clipCss}>clip</div>
+    <div css={clipCss}>
+      <iframe
+        src={'https://clips.twitch.tv/embed?clip=UnsightlyElatedChoughVoteNay'}
+        css={iframeCss}
+      />
+    </div>
   </div>
 );
 
