@@ -7,42 +7,14 @@ import Clip from '../molecules/Clip';
 const clipBoxCss = css`
   border: 1px solid #d4d4d5;
   border-radius: 0.28571429rem;
-  width: 60%;
+  width: 100%;
   height: auto;
-  left: 20%;
-  right: 20%;
   position: absolute;
-  padding: 33.75% 0 0;
-`;
-
-const prevClipBoxCss = css`
-  border: 1px solid #d4d4d5;
-  border-radius: 0.28571429rem;
-  width: 48%;
-  height: auto;
-  left: 15%;
-  position: absolute;
-  padding: 27% 0 0;
-`;
-
-const nextClipBoxCss = css`
-  border: 1px solid #d4d4d5;
-  border-radius: 0.28571429rem;
-  width: 48%;
-  height: auto;
-  right: 15%;
-  position: absolute;
-  padding: 27% 0 0;
+  padding: 56.25% 0 0;
 `;
 
 const ClipStream: FC = () => (
   <div>
-    <div css={prevClipBoxCss}>
-      <Clip />
-    </div>
-    <div css={nextClipBoxCss}>
-      <Clip />
-    </div>
     <div css={clipBoxCss}>
       <Clip />
     </div>
