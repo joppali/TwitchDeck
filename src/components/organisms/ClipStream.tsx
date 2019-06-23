@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import {css, jsx} from '@emotion/core';
 import Slider from 'react-slick';
 
@@ -12,14 +12,23 @@ const settings = {
   slidesToScroll: 1,
 };
 
-const ClipStream: FC = () => (
-  <div>
-    <Slider {...settings}>
-      <Clip />
-      <Clip />
-      <Clip />
-    </Slider>
-  </div>
-);
+const ClipStream: FC = () => {
+  const [clipList] = useState([
+    {
+      id: '1',
+      src: 'https://clips.twitch.tv/embed?clip=StupidAntediluvianBatteryMcaT',
+    },
+  ]);
+
+  return (
+    <div>
+      <Slider {...settings}>
+        {clipList.map(clip => (
+          <Clip key={clip.id} id={clip.id} src={clip.src} />
+        ))}
+      </Slider>
+    </div>
+  );
+};
 
 export default ClipStream;

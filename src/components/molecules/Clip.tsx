@@ -1,7 +1,12 @@
 /** @jsx jsx */
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import {Dimmer, Loader} from 'semantic-ui-react';
 import {css, jsx} from '@emotion/core';
+
+export interface ClipProps {
+  id: string;
+  src: string;
+}
 
 const clipBoxCss = css`
   border: 1px solid #d4d4d5;
@@ -26,16 +31,13 @@ const iframeCss = css`
   height: 100%;
 `;
 
-const Clip: FC = () => (
+const Clip: FC<ClipProps> = ({id, src}) => (
   <div css={clipBoxCss}>
     <Dimmer>
       <Loader>Loading</Loader>
     </Dimmer>
     <div css={clipCss}>
-      <iframe
-        src={'https://clips.twitch.tv/embed?clip=UnsightlyElatedChoughVoteNay'}
-        css={iframeCss}
-      />
+      <iframe src={src} css={iframeCss} id={id} />
     </div>
   </div>
 );
