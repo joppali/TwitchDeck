@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, {FC} from 'react';
+import {FC} from 'react';
 import ClipStream from '../organisms/ClipStream';
 import {Header} from 'semantic-ui-react';
 import {css, jsx} from '@emotion/core';

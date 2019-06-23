@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import React, {FC, useState} from 'react';
-import {css, jsx} from '@emotion/core';
+import {FC, useState} from 'react';
+import {jsx} from '@emotion/core';
 import Slider from 'react-slick';
 
 import Clip from '../molecules/Clip';

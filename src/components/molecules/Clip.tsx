@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, {FC, useState} from 'react';
+import {FC} from 'react';
 import {Dimmer, Loader} from 'semantic-ui-react';
 import {css, jsx} from '@emotion/core';
 
@@ -37,7 +37,7 @@ const Clip: FC<ClipProps> = ({id, src}) => (
       <Loader>Loading</Loader>
     </Dimmer>
     <div css={clipCss}>
-      <iframe src={src} css={iframeCss} id={id} />
+      <iframe src={src} css={iframeCss} title={`title_${id}`} />
     </div>
   </div>
 );
